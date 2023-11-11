@@ -1,0 +1,1329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+:root{
+    --corPrimaria: radial-gradient(ellipse at bottom, #20354d 0%, #0b0f22 100%);
+    --corSecundaria: #2B435F;
+    --corTerciaria: green;
+    --corQuaternaria: #05C2C9;
+    --background2Largura: 41%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.hamburguer{
+    display: none;
+    font-size: 2em;
+    position: absolute;
+    bottom: 12px;
+    right: 35px;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    z-index: 100;
+    transition: 1000ms;
+}
+.hamburguer:hover{
+    transform: rotate(90deg);
+    color: var(--corTerciaria);
+}
+.hamburguerScrolled{
+    bottom: 7px;
+}
+
+
+#landing-page{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(ellipse at bottom, #232323 0%, #1e1e1e 100%);
+    box-shadow: 0px 2px 4px 0px #0000007d;
+    overflow: hidden;
+}
+#landing-page #ilustracao{
+    position: absolute;
+    bottom: 20px;
+    right: 13%;
+    width: 100%;
+    height: 70vh;
+    z-index: 100;
+    opacity: 0;
+}
+
+#back2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: var(--background2Largura);
+    background-color: var(--corTerciaria);
+    box-shadow: -1px 0px 20px 0px black;
+}
+#backgroundMobile{
+    display: none;
+}
+#conteudo{
+    position: relative;
+    height: 100vh;
+    width: calc(100% - var(--background2Largura));
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100;
+}
+#landing-page #card{
+    border-radius: 5px;
+    padding: 2em 0.8em;
+    margin: auto;
+    width: 665px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    z-index: 100;
+}
+#card h1{
+    font-size: 3.6em;
+}
+#card p{
+    color: rgb(221, 220, 220);
+    font-size: 1.2em;
+    text-align: center;
+}
+#card p:nth-child(2){
+    color:var(--corTerciaria);
+    margin: 0px 0px 20px 0px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+#card button{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px 50px;
+    background-color: green;
+    color: white;
+    border: 3px solid green;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 200ms ease-out;
+}
+#card button:hover{
+    border: 3px solid  rgb(255, 255, 255);
+    background-color: rgba(0, 128, 0, 0.544);
+
+}
+#card2 button{
+    font-size:1.5em;
+    font-weight: bold;
+    padding: 12px 50px;
+    background-color: green;
+    color: white;
+    border: 3px solid green;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 200ms ease-out;
+}
+#card2 button:hover{
+    border: 3px solid  rgb(255, 255, 255);
+    background-color: rgba(0, 128, 0, 0.544);
+
+}
+.caixa div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid white;
+}
+/* Animação dos quadrados rodando na tela */
+.caixa div:nth-child(1){
+    top: 9%;
+    left: 46%;
+    border-color: orchid;
+    animation: movimento 8s linear infinite;
+}
+.caixa div:nth-child(2){
+    top: 57%;
+    left: 51%;
+    border-radius: 50%;
+    border-color:  lightblue;
+    animation: movimento 7s linear infinite;
+}
+
+.caixa div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    border-color: tomato;
+    animation: movimento 9s linear infinite;
+}
+.caixa div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    border-radius: 50%;
+    border-color: aqua;
+    animation: movimento 10s linear infinite;
+}
+.caixa div:nth-child(5){
+    top: 78%;
+    left: 10%;
+    border-color: blueviolet;
+    animation: movimento 8s linear infinite;
+}
+.caixa div:nth-child(6){
+    top: 87%;
+    left: 66%;
+    border-radius: 50%;
+    border-color: chartreuse;
+    animation: movimento 12s linear infinite;
+}
+.caixa div:nth-child(7){
+    top: 77%;
+    left: 89%;
+    animation: movimento 15s linear infinite;
+}
+.caixa div:nth-child(8){
+    top: 19%;
+    left: 29%;
+    border-radius: 50%;
+    border-color: gold;
+    animation: movimento 16s linear infinite;
+}
+.caixa div:nth-child(9){
+    top: 86%;
+    left: 33%;
+    border-color: royalblue;
+    animation: movimento 9s linear infinite;
+}
+.caixa div:nth-child(10){
+    top: 9%;
+    left: 80%;
+    border-radius: 50%;
+    border-color: darksalmon;
+    animation: movimento 5s linear infinite;
+}
+@keyframes movimento{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 0.3;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* --------------------------------- */
+#divSobre{
+    padding: 4em 2em;
+    height: fit-content;
+    background-color: #222222;
+
+}
+#divSobre h1{
+    color: black;
+    margin-top: 0;
+}
+#divSobre .barra{
+    background-color: black;
+}
+#divSobre .barra, #divSobre .titulo{
+    opacity: 1;
+}
+
+.abaSobreConteudo{
+    width: 85%;
+}
+.sobreCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    font-size: 1.2em;
+    padding: 0;
+    color: black;
+    background: none;
+    border-radius: 10px;
+}
+#listadeprojetos img:hover{
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+#listadeprojetos section {
+    display: inline-block; /* ou use display: inline; */
+    margin: 10px; /* para adicionar algum espaçamento entre as seções */
+}
+
+#listadeprojetos img {
+    min-height: 300px; /* altura mínima para as imagens */
+    max-width: 100%; /* garantir que as imagens não ultrapassem a largura do contêiner pai */
+    height: auto; /* manter a proporção da imagem */
+}
+.sobreMimTitulo{
+    color: black;
+}
+.sobreCard strong{
+    color: var(--corTerciaria);
+}
+
+.educacaoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.educacaoContainer > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.educacaoContainer div img{
+    width: 300px;
+}
+
+.educacaoContainer div .educacaoDestaque{
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #3a3a3a;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.educacaoDestaque .link{
+    background: none;
+    text-decoration: underline;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.educacaoDestaque .containerDoIcone{
+    width: fit-content;
+    font-size: 1.7rem;
+    margin: 0 17px 0 0;
+}
+
+.imgcircular{
+    width: 260px!important;
+    height: 260px;
+    border-radius: 50%;
+    border: 4px solid lightblue;
+    margin-right: 40px;
+    background-color: white;
+}
+
+
+.tecnologiasLista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 0 6px;
+}
+.tecnologiasLista .listaHeader{
+    width: calc(100% - 6px);
+    flex-direction: row;
+    justify-content: center;
+}
+.tecnologiasLista li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    width: calc(50% - 6px);
+    padding: 10px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.tecnologiasLista img{
+    width: 100px;
+}
+.tecnologiasLista figcaption{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+.minicardsContainer{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 0px;
+    margin-top: 40px;
+}
+.minicardsContainer .miniCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 295px;
+    height: 235px;
+    padding: 1em;
+    border-radius: 15px;
+    background-color: #3a3a3a;
+}
+.miniCard p{
+    color: white;
+    font-size: .9em;
+}
+
+.containerDoIcone{
+    font-size: 2em;
+    text-align: center;
+    padding: 0.1em 0.4em;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    color: rgb(87, 200, 87);
+    background-color: #ffffff;
+    flex-direction: row;
+}
+
+.sobreCard .descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: start;
+}
+
+.btn.estilo{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.btnAbaSobre{
+    margin-top: .4rem;
+    padding: 6px 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .400s;
+}
+#verProjetosBtn{
+    width: 100%;
+    margin: auto;
+    color: white;
+    border: 2px solid var(--corTerciaria);
+    background-color: var(--corTerciaria);
+    
+}
+#verProjetosBtn:hover{
+    border: 2px solid white!important;
+}
+.curriculoDownload{
+    font-size: .9em;
+    color: white;
+   border: 2px solid var(--corTerciaria);
+   background-color: var(--corTerciaria);
+}
+.curriculoDownload:hover{
+    border: 2px solid white!important;
+}
+
+/* --------------------------------- */
+main{
+    position: relative;
+    height: fit-content;
+    background-color: #292929;
+    padding: 1em;
+    overflow-x: visible;
+}
+.titulo{
+    text-align: center;
+    font-size: 2.3em;
+    color: #ffffff;
+    margin: 65px 0px 5px 0px;
+    opacity: 0;
+}
+main > h1{
+    opacity: 0;
+}
+@keyframes animarTitulo{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    50%{
+        transform: translateX(2%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+main .barra{
+    background-color: white;
+    opacity: 0;
+}
+.barra{
+    margin: auto auto 25px auto;
+    height: 4px;
+    width: 110px;
+    opacity: 0;
+}
+@keyframes animarBarra{
+    0%{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    50%{
+        transform: translateX(-30%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main .projetosDica{
+    text-align: center;
+    color: #dddddd;
+    opacity: 0;
+}
+
+#divProjetos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80vw;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+/*---------- Aba saber mais ---------- */
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.459);
+    z-index: 2000;
+    display: none;
+}
+#saberMaisProjetos{
+    position: fixed;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 57vw;
+    height: fit-content;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    overflow: auto;
+    transition: 550ms;
+    z-index: 2001;
+}
+/* classe para animar e revelar a aba saberMaisProjetos */
+.fullScale{
+    transform: translate(-50%, -50%) scale(1)!important;
+}
+#saberMaisProjetos .conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+#saberMaisProjetos .info{
+    display: flex;
+    flex-direction: column;
+}
+
+/*----- botoes -----*/
+/* div contendo os botões */
+#saberMaisProjetos .botoes{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#saberMaisProjetos a{
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid var(--corTerciaria);
+    background: transparent;
+    transition: 250ms;
+    color: black;
+}
+
+#saberMaisProjetos a:first-of-type {
+    background-color: var(--corTerciaria);
+    color: white;
+}
+#saberMaisProjetos a:hover{
+    border: none;
+    background: none;
+    color: var(--corTerciaria);
+}
+#saberMaisProjetos .close{
+    font-size: 1.5em;
+    color: rgb(128, 128, 128);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* ----- ----- */
+
+/* ----- adicionais ----- */
+#saberMaisProjetos hr{
+    margin-bottom: 3%;
+    width: 100%;
+}
+#saberMaisProjetos h1{
+    align-self: flex-start;
+    font-size: 1.5em;
+    color: black;
+}
+#saberMaisProjetos h2{
+    align-self: flex-start;
+    font-size: 1.1em;
+    color: rgb(156, 156, 156);
+}
+#saberMaisProjetos p{
+    text-align: start;
+}
+#saberMaisProjetos img{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5%;
+    border-bottom: 4px solid black;
+}
+/* ---------- ----------- */
+
+.projeto{
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 510px;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+}
+.projeto:nth-child(1){
+    background-image: url(assets/projetosImg/tracker.JPG);
+}
+.projeto:nth-child(2){
+    background-position: top;
+    background-image: url(assets/projetosImg/gamestoreP.JPG);
+}
+.projeto:nth-child(3){
+    background-image: url(assets/projetosImg/todoP.JPG);
+}
+.projeto:nth-child(4){
+    background-image: url(assets/projetosImg/conversor.JPG);
+}
+.projeto:nth-child(5){
+    background-image: url(assets/projetosImg/clima.JPG);
+}
+.projeto:nth-child(6){
+    background-image: url(assets/projetosImg/myloginpageP.JPG);
+}
+@keyframes revelar{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    75%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+.projeto > .projetoInfo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 253, 253, 0.925);
+    z-index: 100;
+    transition: 500ms;
+    opacity: 0;
+    
+}
+
+@keyframes paraBaixo{
+    from{
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+}
+@keyframes paraCima{
+    from{
+        opacity: 0;
+        transform: translateY(150%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+}
+.info1 > h2{
+    font-size: 2.2em;
+    text-align: center;
+}
+.info1 > p{
+    text-align: center;
+    color: var(--corTerciaria);
+}
+
+.info2{
+    display: flex;
+    flex-direction: column;
+}
+.info2 a{
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    font-size: 1.25em;
+    width: 155px;
+    margin-bottom: 1em;
+    padding: 2px;
+    border: 2px solid var(--corTerciaria);
+    background: transparent;
+    transition: 400ms;
+    color: black;
+}
+
+.info2 a:hover{
+    background-color: var(--corTerciaria);
+    color: white;
+}
+
+/* ------------------------------- */
+
+
+#divContato{
+    overflow: hidden;
+    position: relative;
+    padding: 1em;
+    background-color: var(--corSecundaria);
+    height: fit-content;
+    width: 100%;
+}
+#divContato svg:first-of-type{
+    position: absolute;
+    top: -3vh;
+    left: 0;
+    width: 100%;
+}
+#divContato h1{
+    color: white;
+    margin-top: 3em;
+}
+#divContato .barra{
+    background: white;
+}
+
+.meusContatosLista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    gap: 15px;
+    margin-top: 45px;
+    opacity: 0;
+}
+
+.meusContatosLista li{
+    text-align: center;
+}
+.meusContatosLinks{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    width: 100%;
+    gap: 35px;
+}
+.meusContatosLista a{
+    margin-bottom: 3px;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    transition: 500ms;
+}
+
+.meusContatosLista .linkedinLink:hover{
+    color: #5795f3;
+}
+.meusContatosLista .githubLink:hover{
+    color: orange;
+}
+.meusContatosLista p{
+    text-align: center;
+    color: white;
+}
+
+#divContato #formularioDescricao{
+    font-size: 1.1em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--corQuaternaria);
+    opacity: 0;
+}
+
+/* ------------------------------- */
+footer{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    background-color: #0b0f22;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+footer > p{
+    text-align: center;
+    color:#2B435F;
+
+}
+
+footer span{
+    color: var(--corTerciaria);
+}
+
+/* ------------------------------- */
+
+
+
+
+/* Versão 4k */
+@media only screen and (min-width: 1700px){
+    html{
+        font-size: 22px;
+    }
+
+    /* ----- TITULO DAS SECTIONS ----- */
+    .titulo{
+        font-size: 3.5em;
+    }
+    .barra{
+        margin-bottom: 40px;
+    }
+
+    /* ----- HERO SECTION ----- */
+    #card h1{
+        width: max-content;
+        font-size: 4.5em;
+
+    }
+    #card p{
+        font-size: 1.5em;
+    }
+    #card p:nth-child(2){
+        font-size: 1.5em;
+    }
+    #card button{
+        font-size: 1.8em;
+        padding: 10px 50px;
+        border-radius: 50px;
+    }
+    .elementor-button-text {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #4CAF50;
+        color: #fff;
+        border-radius: 30px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    /* ----- SOBRE MIM ----- */
+    .sobreMimTitulo{
+        font-size: 2em;
+        color: black;
+    }
+    /* Parágrafo sobre mim  */
+    .sobreMimTitulo + p{ 
+        font-size: 1.3em;
+    }
+    .curriculoDownload{
+        font-size: 1.3em;
+    }
+
+    /* ------ CARDS ----- */
+    .minicardsContainer .miniCard {
+        width: 415px;
+        height: fit-content;
+    }
+    .miniCard P{
+        font-size: 1em;
+    }
+
+    /* ----- TECNOLOGIAS LISTA ------ */
+    .tecnologiasLista {
+        font-size: 1.2em;
+    }
+    .tecnologiasLista img {
+        width: 200px;
+    }
+    #verProjetosBtn {
+       font-size: 1.5em;
+    }
+
+    /* ----- PROJETOS SECITON ------ */
+    main .projetosDica {
+        font-size: 1.4em;
+    }
+
+    .projeto {
+        width: 500px;
+        height: 735px;
+    }
+    .info1 > h2 {
+        font-size: 2.5em;
+    }
+    .info1 > p {
+        font-size: 1.3em;
+    }
+    .info2 a {
+        font-size: 1.9em;
+        width: max-content;
+        padding: 10px 20px;
+    }
+    
+    
+    
+    
+
+    /* ABA SABER MAIS SOBRE OS PROJETOS */
+    #saberMaisProjetos{
+        width: 50vw;
+        
+    }
+    #saberMaisProjetos img{
+        display: block;
+        width: 100%;
+        margin: auto auto 5% auto;
+    }
+    #saberMaisProjetos h1{
+        font-size: 2.6em;
+    }
+    #saberMaisProjetos h2{
+        font-size: 1.9em;
+    }
+    #saberMaisProjetos p{
+        font-size: 1.8em;
+    }
+    #saberMaisProjetos a{
+        font-size: 1.9em;
+        padding: 10px;
+        
+    }
+    #saberMaisProjetos .close{
+        font-size: 2.7em;
+        margin-right: 2%;
+    }
+
+
+    
+    /* ----- DIV CONTATO ----- */
+    .meusContatosLista p {
+        font-size: 1.5em;
+    } 
+
+    #divContato #formularioDescricao{
+        font-size: 1.5em;
+        margin-bottom: 50px;
+    }
+
+    form{
+        width: 35vw;
+    }
+    form input:not(:last-child), form textarea{
+        font-size: 1.3em;
+        height: 100px;
+    }
+    form textarea{
+        height: 250px;
+    }
+    form input[type="submit"]{
+        font-size: 1.5em;
+        width: 25%;
+        height: fit-content;
+    }
+
+    footer{
+        padding: 55px;
+    }
+    footer p{
+        font-size: 1.5em;
+    }
+}
+
+/* Versão desktop */
+@media only screen and (max-width: 1140px){
+    .sobreCard{
+        width: 80%;
+    }
+
+
+
+    #saberMaisProjetos{
+        width: 80vw;
+    }
+    form{
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #card h1{
+        font-size: 2.6em;
+    }
+    #card p{
+        font-size: 1.2em;
+    }
+    #card p:nth-child(2){
+        font-size: 1em;
+    }
+    #card button{
+        font-size: 1.2em;
+        padding: 12px 50px;
+        border-radius: 50px;
+    }
+
+    .titulo{
+        font-size: 2.8em;
+    }
+    .projeto {
+        width: 280px;
+        height: 393px;
+    }
+    .info1 > h2{
+        font-size: 2em;
+    }
+    .info1 p{
+        font-size: 0.9em;
+    }
+    .info2 a{
+        font-size: 1.1em;
+        width: 200px;
+    }
+
+
+
+    .sobreCard{
+        width: 90%;
+    }
+    .sobreCard img{
+        width: 200px;
+        height: 200px;
+    }
+
+
+    .educacaoContainer{
+        margin: 60px auto;
+    }
+    .graduacaoDiv, .devWebDiv{
+        flex-direction: column!important;
+        justify-content: center!important;
+    }
+
+
+    form{
+        width: 50vw;
+    }
+
+}
+@media only screen and (max-width: 690px){
+    #card h1{
+        font-size: 2.4em;
+    }
+    #card p{
+        font-size: 1.2em;
+    }
+    #card p:nth-child(2){
+        font-size: 0.8em;
+    }
+    #card button{
+        font-size: 1em;
+        padding: 6px 20px;
+    }
+
+    #landing-page #ilustracao{
+        right: 13%;
+        height: 70vh;
+    }
+
+    #conteudo{
+        width: 70%;
+    }
+    #back2{
+        height: 100vh;
+        width: 30%;
+        background-color: var(--corTerciaria);
+    }
+
+    #saberMaisProjetos{
+        width: 90vw;
+    }
+
+    .titulo{
+        font-size: 2.6em;
+    }
+    
+    .info2 a{
+        font-size: 1em;
+        width: 160px;
+    }
+
+
+
+    .sobreCard{
+        width: 100%;
+    }
+    .tecnologiasCard{
+        flex-direction: column-reverse;
+    }
+    .tecnologiasCard img{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .tecnologiasCard p{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    
+    .minicardsContainer{
+        flex-direction: column;
+    }
+
+
+
+    #divContato #formularioDescricao{
+        font-size: 1em;
+    }
+    form{
+        width: 72vw;
+    }
+
+}
+
+/* Versão mobile */
+@media only screen and (max-width: 500px){
+    .hamburguer{
+        display: flex;
+    }
+     /*------------------- 
+         landing-page estilo
+    -------------------- */
+    #card h1{
+        font-size: 3em;
+    }
+
+    #card p:nth-child(2){
+        font-size: 1.2em;
+    }
+    #conteudo{
+        width: 100%;
+    }
+    #landing-page #card{
+        padding: 0px;
+        height: 85vh;
+        justify-content: center;
+        margin-top: 9vh;
+        text-align: center;
+        
+    }
+    #card button{
+        font-size: 1.2em;
+        padding: 5px 14px;
+        margin-top: 30px;
+    }
+    #back2{
+        display: none;
+    }
+    #backgroundMobile{
+        display: flex;
+        width: 266px;
+        background-color: var(--corTerciaria);
+        height: 28vh;
+        border-radius: 10px;
+        box-shadow: -1px 0px 20px 0px black;
+    }
+    #landing-page #ilustracaoMobile{
+        top: -15px;
+        left: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    /*------------------- 
+         Aba sobre estilo
+    -------------------- */
+
+    .sobreCard{
+        width: 100%;
+    }
+    .tecnologiasLista img {
+        width: 75px;
+    }
+
+    #formularioDescricao{
+        font-size: .9em;
+    }
+
+
+    .imgcircular{
+        width: 200px!important;
+        height: 200px;
+        margin: 30px auto;
+    }
+    div.educacaoDestaque{
+        flex-direction: column!important;
+        text-align: center;
+    }
+
+    div.educacaoDestaque p{
+        margin-top: 15px!important;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .educacaoDestaque .containerDoIcone{
+        margin-right: 0;
+    }
+
+
+
+
+    /*------------------- 
+         SaberMaisProjetos estilo
+    -------------------- */
+    #saberMaisProjetos{
+        width: 99vw;
+        
+    }
+    #saberMaisProjetos .principais{
+        display: flex;
+        flex-direction: column;
+    }
+    #saberMaisProjetos a{
+        font-size: 1.1em;
+        width: 180px;
+        padding: 3px;
+    }
+
+     /*------------------- 
+         Contato estilo
+    -------------------- */
+    .meusContatosLista{
+        flex-direction: column;
+    }
+    form{
+        width: 90vw;
+    }
+    form input[type="submit"]{
+        width: 30%;
+    }
+    footer{
+        height: 18vh;
+    }
+}
+@media only screen and (max-width: 380px){
+    #card h1{
+        font-size: 3em;
+    }
+
+    #card p:nth-child(2){
+        font-size: 1em;
+    }
+
+    #divSobre{
+        padding: 4em 1.5em;
+    }
+
+    .minicardsContainer .miniCard {
+        width: 100%;
+        height: 250px;
+    }
+    .tecnologiasLista {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-height: 620px){
+    #card h1{
+        font-size: 2.5em;
+    }
+
+    #backgroundMobile{
+        height: 18vh;
+    }
+}
