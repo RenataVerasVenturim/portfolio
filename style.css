@@ -13,7 +13,12 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
+img{
+    border-radius: 20px;
+    margin:auto;
+    display: block;
+    max-width: 100%;
+}
 
 .hamburguer{
     display: none;
@@ -845,7 +850,7 @@ footer{
 }
 footer > p{
     text-align: center;
-    color:#2B435F;
+    color:#d4d8dc;
 
 }
 
