@@ -129,6 +129,11 @@ img{
     background-color: rgba(0, 128, 0, 0.544);
 
 }
+#card2 {
+    background-color: black;
+    color:white;
+    border-radius: 20px;
+}
 #card2 button{
     font-size:1.5em;
     font-weight: bold;
@@ -139,6 +144,7 @@ img{
     border-radius: 50px;
     cursor: pointer;
     transition: 200ms ease-out;
+    margin: 10px 0px;
 }
 #card2 button:hover{
     border: 3px solid  rgb(255, 255, 255);
@@ -268,8 +274,8 @@ img{
     transition: opacity 0.3s ease;
 }
 #listadeprojetos section {
-    display: inline-block; /* ou use display: inline; */
-    margin: 10px; /* para adicionar algum espaçamento entre as seções */
+    display: inline-block; 
+    margin: 10px;
 }
 
 #listadeprojetos img {
